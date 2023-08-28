@@ -11,17 +11,21 @@
 
 ## Execution
 
-1. Launch ARIAC environment with rwa1 trail file.
+1. Launch the ARIAC environment with rwa1 trail file.
 
-    ```$ ros2 launch ariac_gazebo ariac.launch.py trial_name:=rwa1```
+    ```
+       $ ros2 launch ariac_gazebo ariac.launch.py trial_name:=rwa1
+    ```
 
     Note: Initially, [rwa1.yaml](RWA1/rwa1.yaml) needs to be placed in the config/trials folder of ariac_gazebo (as shown in the package structure below)
 
     ![Fig. 1 - Trial File Location](RWA1/Fig1.png)
 
 
-2. Launch CCS
+3. Launch CCS
 
-    ```$ ros2 launch ARIAC-2023 ccs.launch.py```
+    ```
+       $ ros2 launch ARIAC-2023 ccs.launch.py
+    ```
 
 ## Example Output
