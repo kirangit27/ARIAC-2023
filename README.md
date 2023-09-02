@@ -1,25 +1,27 @@
-# RWA1
+# RWA2
 
 ## Tasks 
-- Starting the Competition
-- Retrieving Orders
-    - representing Orders using OOP and storing them in a data structure.
-- Submitting Orders
-- Ending the Competition
+- Starting the Competition (RWA1).
+- Retrieving Orders (RWA1).
+- Locate parts required in the orders.
+- Identify challenges.
+- Call functions to do Kitting/Assembly.
+- Submitting Orders (RWA1).
+- Ending the Competition (RWA1).
 
-[RWA1](RWA1/RWA1_ENPM663_SPRING2023.pdf)
+[RWA2](RWA2/RWA2_ENPM663_SPRING2023.pdf)
 
 ## Execution
 
-1. Launch the ARIAC environment with rwa1 trail file.
+1. Launch the ARIAC environment with rwa2 trail file.
 
     ```
-       $ ros2 launch ariac_gazebo ariac.launch.py trial_name:=rwa1
+       $ ros2 launch ariac_gazebo ariac.launch.py trial_name:=rwa2
     ```
 
-    Note: Initially, [rwa1.yaml](RWA1/rwa1.yaml) needs to be placed inside the config/trials folder present in the ariac_gazebo package (as shown in the package structure below)
+    Note: Initially, [rwa2.yaml](RWA2/rwa2.yaml) needs to be placed inside the config/trials folder present in the ariac_gazebo package (as shown in the package structure below)
 
-    ![Fig. 1 - Trial File Location](RWA1/imgs/Fig1.png)
+    ![Fig. 1 - Trial File Location](RWA2/imgs/pkg_struct.png)
 
 
 3. Launch CCS

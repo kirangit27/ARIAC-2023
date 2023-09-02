@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2023
  * 
  */
-#include "../include/ARIAC-2023/rwa1.hpp"
+#include "../include/ARIAC-2023/rwa2.hpp"
 
 /**
  * @brief Subscriber function that subscibes to competition state msg and calls the functions to trigger the start/end of the competition accordingly.
