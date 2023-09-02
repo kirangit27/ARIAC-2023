@@ -30,7 +30,6 @@
 #include "ariac_msgs/srv/submit_order.hpp"
 
 
-
 /**
  * @brief A namespace defined to identify the data structure used to store order details
  * 
@@ -102,67 +101,7 @@ namespace order_
             {2,"COMBINED"}};
     };
 
-    
 }
-
-
-// /**
-//  * @brief Structure that stores the Quadrant, color and type of a Kitting part
-//  * 
-//  */
-// struct KittingPart {
-//     uint8_t quadrant;
-//     uint8_t color;
-//     uint8_t type;
-// };
-
-// /**
-//  * @brief Structure that stores information about the Kitting Task itself. It stores the AGV number, tray_id and destination and different kitting parts.
-//  * 
-//  */
-// struct KittingType {
-//     uint8_t quadrant;
-//     uint8_t agv_number;
-//     int tray_id;
-//     uint8_t destination;
-//     std::vector<KittingPart> parts;
-// };
-
-// /**
-//  * @brief Structure that stores the color,type of parts, the pose and direction of the parts uused for both Assembly and Combined task
-//  * 
-//  */
-// struct A_C_Part {
-//     uint8_t color;
-//     uint8_t type;
-//     geometry_msgs::msg::PoseStamped pose_stamp;
-//     geometry_msgs::msg::Vector3 install_direction;
-// };
-
-// /**
-//  * @brief Structure that stores information about Assembly and the Combined task. It stores the station number, the different AGV numbers and parts necessary to complete the task
-//  * 
-//  */
-// struct A_C_Type {
-//     uint8_t station;
-//     std::vector<uint8_t> agv_numbers;
-//     std::vector<A_C_Part> parts;
-// };
-
-// /**
-//  * @brief Class that defines members that define the order itself. Id stores the order id, type stores the type of task, priority is a boolean
-//  * variable that stores either 0 or 1 depending on the order priority.
-//  * 
-//  */
-// class Orders{
-//   public:
-//     std::string id;
-//     uint8_t type;
-//     bool priority;
-//     KittingType kitting_type;
-//     A_C_Type a_c_type;
-// };
-
 
 
 /**
@@ -197,14 +136,6 @@ class CompetitionARIAC : public rclcpp::Node
 
         submit_order_client_ = create_client<ariac_msgs::srv::SubmitOrder>("/ariac/submit_order");
 
-
-        // comp_state_sub = this->create_subscription<ariac_msgs::msg::CompetitionState>("/ariac/competition_state", 10, 
-        //                                                             std::bind(&CompetitionStateSubscriber::competitionStateCallback, this, std::placeholders::_1));
-
-        // order_sub = this->create_subscription<ariac_msgs::msg::Order>("/ariac/orders", 10, 
-        //                                                             std::bind(&CompetitionStateSubscriber::orderCallback, this, std::placeholders::_1));                                               
-
-        // submit_order_client_ = create_client<ariac_msgs::srv::SubmitOrder>("/ariac/submit_order");
     }
 
     private:
@@ -249,7 +180,6 @@ class CompetitionARIAC : public rclcpp::Node
          */
         void OrderCallback(const ariac_msgs::msg::Order::SharedPtr order_msg); 
 
-
         /**
          * @brief Function that calls the service to start the competition
          * 
@@ -275,55 +205,5 @@ class CompetitionARIAC : public rclcpp::Node
         rclcpp::Client<std_srvs::srv::Trigger>::SharedPtr end_comp_client_;
         rclcpp::Client<ariac_msgs::srv::SubmitOrder>::SharedPtr submit_order_client_;
 
-
-        // /**
-        //  * @brief Callback function definition that is called when competition state is received
-        //  * 
-        //  * @param msg 
-        //  */
-        // void competitionStateCallback(const ariac_msgs::msg::CompetitionState::SharedPtr msg);
-        //  /**
-        //  * @brief Function that calls the service to start the competition
-        //  * 
-        //  */  
-        // void callService_start();
-        // /**
-        //  * @brief Function that calls the service to end the competition
-        //  * 
-        //  */        
-        // void callService_end();
-
-
-        // rclcpp::Subscription<ariac_msgs::msg::CompetitionState>::SharedPtr comp_state_sub;
-
-        // bool submitted{false};
-        // /**
-        //  * @brief Vector to store list of orders
-        //  * 
-        //  */
-        // std::vector<Orders> orders_list;
-        // /**
-        //  * @brief Subscriber that subscribes to ariac/orders msg.
-        //  * 
-        //  */
-        // rclcpp::Subscription<ariac_msgs::msg::Order>::SharedPtr order_sub;
-
-        // int list_size{0};
-        // /**
-        //  * @brief Callback function that gets called whenever an order is received
-        //  * 
-        //  * @param order_msg 
-        //  */
-
-        // void orderCallback(const ariac_msgs::msg::Order::SharedPtr order_msg); 
-        // /**
-        //  * @brief Function that calls service to submit the order.
-        //  * 
-        //  * @param order 
-        //  */
-        // void callService_submit(std::string order);
-
-
-        // rclcpp::Client<ariac_msgs::srv::SubmitOrder>::SharedPtr submit_order_client_;
 };
 
