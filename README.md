@@ -19,7 +19,7 @@
 
     Note: Initially, [rwa1.yaml](RWA1/rwa1.yaml) needs to be placed inside the config/trials folder present in the ariac_gazebo package (as shown in the package structure below)
 
-    ![Fig. 1 - Trial File Location](RWA1/Fig1.png)
+    ![Fig. 1 - Trial File Location](RWA1/imgs/Fig1.png)
 
 
 3. Launch CCS
@@ -29,3 +29,9 @@
     ```
 
 ## Example Output
+ARIAC server terminal
+![Fig. 2 - ariac server terminal](RWA1/imgs/sample_output1.png)
+
+CCS terminal
+![Fig. 3 - CCS terminal](RWA1/imgs/sample_output2.png)
+
