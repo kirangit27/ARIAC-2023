@@ -11,6 +11,18 @@
 
 [RWA2](RWA2/RWA2_ENPM663_SPRING2023.pdf)
 
+## Task-level Planning
+Task-level planning consists of high-level actions to complete tasks. These actions will eventually be translated to low-level commands (motion planning), the latter will be covered later.
+
+- CCS Pipeline
+![Activity Diagram](RWA2/imgs/ccs.png)
+- Kitting Task Pipeline
+![Activity Diagram](RWA2/imgs/kitting.png)
+- Assembly Task Pipeline
+![Activity Diagram](RWA2/imgs/assembly.png)
+- Combined Task Pipeline
+![Activity Diagram](RWA2/imgs/combined.png)
+
 ## Execution
 
 1. Launch the ARIAC environment with rwa2 trail file.
