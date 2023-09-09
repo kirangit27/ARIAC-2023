@@ -14,7 +14,7 @@
 ## Task-level Planning
 Task-level planning consists of high-level actions to complete tasks. These actions will eventually be translated to low-level commands (motion planning), the latter will be covered later.
 
-- CCS Pipeline
+- CCS Pipeline    
 ![Activity Diagram](RWA2/imgs/ccs.png)
 - Kitting Task Pipeline
 ![Activity Diagram](RWA2/imgs/kitting.png)
