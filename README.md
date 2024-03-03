@@ -14,18 +14,25 @@
 ## Task-level Planning
 Task-level planning consists of high-level actions to complete tasks. These actions will eventually be translated to low-level commands (motion planning), the latter will be covered later.
 
-- CCS Pipeline    
+- CCS Pipeline
+      
 ![Activity Diagram](RWA2/imgs/ccs.png)
+
 - Kitting Task Pipeline
+  
 ![Activity Diagram](RWA2/imgs/kitting.png)
+
 - Assembly Task Pipeline
+  
 ![Activity Diagram](RWA2/imgs/assembly.png)
+
 - Combined Task Pipeline
+  
 ![Activity Diagram](RWA2/imgs/combined.png)
 
 ## Execution
 
-1. Launch the ARIAC environment with rwa2 trail file.
+1. Launch the ARIAC environment with the rwa2 trail file.
 
     ```
        $ ros2 launch ariac_gazebo ariac.launch.py trial_name:=rwa2
@@ -44,9 +51,11 @@ Task-level planning consists of high-level actions to complete tasks. These acti
 
 ## Example Output
 ARIAC server terminal
+
 ![Fig. 2 - ariac server terminal](RWA2/imgs/Sample_output1.png)
 ![Fig. 2 - ariac server terminal](RWA2/imgs/Sample_output2.png)
 
 CCS terminal
+
 ![Fig. 3 - CCS terminal](RWA2/imgs/Sample_output3.png)
 ![Fig. 3 - CCS terminal](RWA2/imgs/Sample_output4.png)
