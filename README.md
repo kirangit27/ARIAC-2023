@@ -44,8 +44,9 @@ Task-level planning consists of high-level actions to complete tasks. These acti
 
 ## Example Output
 ARIAC server terminal
-![Fig. 2 - ariac server terminal](RWA1/imgs/sample_output1.png)
+![Fig. 2 - ariac server terminal](RWA2/imgs/Sample_output1.png)
+![Fig. 2 - ariac server terminal](RWA2/imgs/Sample_output2.png)
 
 CCS terminal
-![Fig. 3 - CCS terminal](RWA1/imgs/sample_output2.png)
-
+![Fig. 3 - CCS terminal](RWA2/imgs/Sample_output3.png)
+![Fig. 3 - CCS terminal](RWA2/imgs/Sample_output4.png)
