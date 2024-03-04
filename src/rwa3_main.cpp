@@ -10,7 +10,7 @@
  * 
  */
 
-#include "../include/ARIAC-2023/rwa2.hpp"
+#include "../include/ARIAC-2023/rwa3.hpp"
 #include "rclcpp/rclcpp.hpp"
 
 int main(int argc, char **argv)
