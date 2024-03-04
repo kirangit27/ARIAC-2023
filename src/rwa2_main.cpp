@@ -1,5 +1,5 @@
 /**
- * @file rwa1_main.cpp
+ * @file rwa2_main.cpp
  * @author Kiran S Patil,Aniruddh Balram,Vyshnv Achuthan,Badrinarayanan
  * @brief Main function for rwa1.cpp. A Multithreded executor is also defined to perform multithreading 
  * to avoid deadlocks
@@ -10,7 +10,7 @@
  * 
  */
 
-#include "../include/ARIAC-2023/rwa1.hpp"
+#include "../include/ARIAC-2023/rwa2.hpp"
 #include "rclcpp/rclcpp.hpp"
 
 int main(int argc, char **argv)

@@ -12,8 +12,8 @@ def generate_launch_description():
 
     node = Node(
         package='ARIAC-2023',
-        executable='rwa1',
-        name='rwa1',
+        executable='rwa2',
+        name='rwa2',
         #output='screen'
     )
 

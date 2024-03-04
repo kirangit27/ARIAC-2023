@@ -30,11 +30,11 @@ foreach(Dependency IN ITEMS ${SENSOR_CAMERA_DEPENDENCIES})
   find_package(${Dependency} REQUIRED)
 endforeach()
 
-add_executable(rwa1 src/rwa1.cpp src/rwa1_main.cpp)		#UPDATED	     
-ament_target_dependencies(rwa1 rclcpp ariac_msgs std_srvs)	#UPDATED
+add_executable(rwa2 src/rwa2.cpp src/rwa2_main.cpp)		#UPDATED	     
+ament_target_dependencies(rwa2 rclcpp ariac_msgs std_srvs)	#UPDATED
 
 install(TARGETS				#UPDATED
-	rwa1			#UPDATED
+	rwa2			#UPDATED
 	DESTINATION lib/${PROJECT_NAME}		#UPDATED
 	)
 
