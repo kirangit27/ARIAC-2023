@@ -1,46 +1,37 @@
-# RWA2
+# RWA3
 
 ## Tasks 
-- Starting the Competition (RWA1).
-- Retrieving Orders (RWA1).
-- Locate parts required in the orders.
-- Identify challenges.
-- Call functions to do Kitting/Assembly.
+This assignment consists of building one kitting task order. The order is announced
+at the beginning of the competition. This order needs 2 parts from the conveyor belt
+and 2 parts from the bins.
+- Start the Competition (RWA1).
+- Parse the Order published (RWA1).
+- Locate parts required in the orders (RWA2), use cameras to do so.
+- Locate tray required in the Order (use cameras).
+- Perform the task within the Order:
+    - Move parts from conveyor belt to bins.
+    - Move tray from table to AGV.
+    - Move parts from bins to tray.
+- Move the AGV to the warehouse.
 - Submitting Orders (RWA1).
 - Ending the Competition (RWA1).
 
-[RWA2](RWA2/RWA2_ENPM663_SPRING2023.pdf)
+An in detail Assignment description can be found in
+[RWA3](RWA3/RWA3_ENPM663_SPRING2023.pdf)
 
-## Task-level Planning
-Task-level planning consists of high-level actions to complete tasks. These actions will eventually be translated to low-level commands (motion planning), the latter will be covered later.
+## Sensor/Camera Placements
+This assignment requires the use of cameras and sensors, thus we need to create a sensor conﬁguration ﬁle. [sensors.yaml]() is present in the config folder.
 
-- CCS Pipeline
-      
-![Activity Diagram](RWA2/imgs/ccs.png)
-
-- Kitting Task Pipeline
-  
-![Activity Diagram](RWA2/imgs/kitting.png)
-
-- Assembly Task Pipeline
-  
-![Activity Diagram](RWA2/imgs/assembly.png)
-
-- Combined Task Pipeline
-  
-![Activity Diagram](RWA2/imgs/combined.png)
 
 ## Execution
 
 1. Launch the ARIAC environment with the rwa2 trail file.
 
     ```
-       $ ros2 launch ariac_gazebo ariac.launch.py trial_name:=rwa2
+       $ ros2 launch ariac_gazebo ariac.launch.py trial_name:=rwa3
     ```
 
-    Note: Initially, [rwa2.yaml](RWA2/rwa2.yaml) needs to be placed inside the config/trials folder present in the ariac_gazebo package (as shown in the package structure below)
-
-    ![Fig. 1 - Trial File Location](RWA2/imgs/pkg_struct.png)
+    Note: Initially, [rwa3.yaml](RWA3/rwa3.yaml) needs to be placed inside the config/trials folder present in the ariac_gazebo package (as done in previous assignments)
 
 ![environment](/imgs/environment.png)
 
@@ -51,12 +42,9 @@ Task-level planning consists of high-level actions to complete tasks. These acti
     ```
 
 ## Example Output
-ARIAC server terminal
 
-![Fig. 2 - ariac server terminal](RWA2/imgs/Sample_output1.png)
-![Fig. 2 - ariac server terminal](RWA2/imgs/Sample_output2.png)
+RWA 3 run (16x)
 
-CCS terminal
+![Fig.1 RWA 3 complete run gif](RWA3/imgs/rwa3_16x.gif)
 
-![Fig. 3 - CCS terminal](RWA2/imgs/Sample_output3.png)
-![Fig. 3 - CCS terminal](RWA2/imgs/Sample_output4.png)
+
