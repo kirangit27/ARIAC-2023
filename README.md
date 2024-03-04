@@ -1,4 +1,4 @@
-# RWA2
+# RWA3
 
 ## Tasks 
 This assignment consists of building one kitting task order. The order is announced
@@ -41,12 +41,9 @@ This assignment requires the use of cameras and sensors, thus we need to create 
     ```
 
 ## Example Output
-ARIAC server terminal
 
-![Fig. 2 - ariac server terminal](RWA2/imgs/Sample_output1.png)
-![Fig. 2 - ariac server terminal](RWA2/imgs/Sample_output2.png)
+RWA 3 run (16x)
 
-CCS terminal
+![Fig.1 RWA 3 complete run gif](RWA3/imgs/rwa3_16x.gif)
 
-![Fig. 3 - CCS terminal](RWA2/imgs/Sample_output3.png)
-![Fig. 3 - CCS terminal](RWA2/imgs/Sample_output4.png)
+
