@@ -42,6 +42,7 @@ Task-level planning consists of high-level actions to complete tasks. These acti
 
     ![Fig. 1 - Trial File Location](RWA2/imgs/pkg_struct.png)
 
+![environment](/imgs/environment.png)
 
 3. Launch CCS
 
