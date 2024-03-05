@@ -25,7 +25,7 @@ This assignment requires the use of cameras and sensors, thus we need to create 
 
 ## Execution
 
-1. Launch the ARIAC environment with the rwa2 trail file.
+1. Launch the ARIAC environment with the rwa3 trail file.
 
     ```
        $ ros2 launch ariac_gazebo ariac.launch.py trial_name:=rwa3 competitor_pkg:=ARIAC-2023 sensor_config:=sensors
@@ -33,7 +33,10 @@ This assignment requires the use of cameras and sensors, thus we need to create 
 
     Note: Initially, [rwa3.yaml](RWA3/rwa3.yaml) needs to be placed inside the config/trials folder present in the ariac_gazebo package (as done in previous assignments)
 
-
+2. Launch the move_group node
+    ```
+       $ ros2 launch ariac_moveit_config ariac_robots_moveit.launch.py
+    ```
 3. Launch CCS
 
     ```
