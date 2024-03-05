@@ -30,11 +30,11 @@ foreach(Dependency IN ITEMS ${SENSOR_CAMERA_DEPENDENCIES})
   find_package(${Dependency} REQUIRED)
 endforeach()
 
-add_executable(rwa3 src/rwa3.cpp src/rwa3_main.cpp)		#UPDATED	     
-ament_target_dependencies(rwa3 rclcpp ariac_msgs std_srvs shape_msgs moveit_ros_planning_interface)	#UPDATED
+add_executable(rwa4 src/rwa4.cpp src/rwa4_main.cpp)		#UPDATED	     
+ament_target_dependencies(rwa4 rclcpp ariac_msgs std_srvs shape_msgs moveit_ros_planning_interface)	#UPDATED
 
 install(TARGETS				#UPDATED
-	rwa3			#UPDATED
+	rwa4			#UPDATED
 	DESTINATION lib/${PROJECT_NAME}		#UPDATED
 	)
 
