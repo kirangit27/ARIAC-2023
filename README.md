@@ -22,6 +22,11 @@ An in detail Assignment description can be found in
 
     Note: Initially, [rwa4.yaml](RWA4/rwa4.yaml) needs to be placed inside the config/trials folder present in the ariac_gazebo package (as done in previous assignments)
 
+2. Launch the move_group node
+
+    ```
+       $ ros2 launch ariac_moveit_config ariac_robots_moveit.launch.py
+    ```
 
 3. Launch CCS
 
