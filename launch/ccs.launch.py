@@ -56,7 +56,7 @@ def launch_setup(context, *args, **kwargs):
 
     ariac_node = Node(
         package="ARIAC-2023",
-        executable="rwa3", #Change to run your executable
+        executable="rwa4", #Change to run your executable
         output="screen",
         parameters=[
             robot_description,
