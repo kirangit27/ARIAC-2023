@@ -1,39 +1,32 @@
-# RWA3
+# RWA4
 
-## Tasks 
-This assignment consists of building one kitting task order. The order is announced
-at the beginning of the competition. This order needs 2 parts from the conveyor belt
-and 2 parts from the bins.
-- Start the Competition (RWA1).
-- Parse the Order published (RWA1).
-- Locate parts required in the orders (RWA2), use cameras to do so.
-- Locate tray required in the Order (use cameras).
-- Perform the task within the Order:
-    - Move parts from conveyor belt to bins.
-    - Move tray from table to AGV.
-    - Move parts from bins to tray.
-- Move the AGV to the warehouse.
-- Submitting Orders (RWA1).
-- Ending the Competition (RWA1).
+## Assignment Description
+This assignment consists of completing a combined task and a kitting task.
+- The Order with the combined task is announced at the beginning of the competition. For the kitting part of the combined task, use the tray with id 0.
+- The Order with the kitting task is announced 50s after the competition has started. This second Order is a high-priority Order which should be handled as soon as it is announced.
 
 An in detail Assignment description can be found in
-[RWA3](RWA3/RWA3_ENPM663_SPRING2023.pdf)
+[RWA4](RWA4/RWA4_ENPM663_SPRING2023.pdf)
 
-## Sensor/Camera Placements
-This assignment requires the use of cameras and sensors, thus we need to create a sensor conﬁguration ﬁle. [sensors.yaml]() is present in the config folder.
-
+## Challenges
+- High-priority Order: A kitting Order, which is of high-priority, is announced 50 s after the competition has started. For this assignment, you will use the ﬂoor robot to perform kitting (including kitting during a combined task) and the ceiling robot to perform assembly. The high-priority Order must be started as soon as it is announced. If the robot is holding a part when the new Order is announced, the competitor control system (CCS) should place the part before starting working on the new Order. Once the high-priority Order is completed, the CCS should resume the other Order. There is a need to keep track of the steps within an Order so it can be resumed.
+- Faulty Part Challenge: The ﬁrst part placed in quadrant on AGV 4 is faulty. Once a part is detected as faulty, it must be removed and replaced with another one. Make sure you discard the faulty part in one of the blue bins.
 
 ## Execution
 
 1. Launch the ARIAC environment with the rwa2 trail file.
 
     ```
-       $ ros2 launch ariac_gazebo ariac.launch.py trial_name:=rwa3 competitor_pkg:=ARIAC-2023 sensor_config:=sensors
+       $ ros2 launch ariac_gazebo ariac.launch.py trial_name:=rwa4 competitor_pkg:=ARIAC-2023 sensor_config:=sensors
     ```
 
-    Note: Initially, [rwa3.yaml](RWA3/rwa3.yaml) needs to be placed inside the config/trials folder present in the ariac_gazebo package (as done in previous assignments)
+    Note: Initially, [rwa4.yaml](RWA4/rwa4.yaml) needs to be placed inside the config/trials folder present in the ariac_gazebo package (as done in previous assignments)
 
-![environment](/imgs/environment.png)
+2. Launch the move_group node
+
+    ```
+       $ ros2 launch ariac_moveit_config ariac_robots_moveit.launch.py
+    ```
 
 3. Launch CCS
 
@@ -43,7 +36,7 @@ This assignment requires the use of cameras and sensors, thus we need to create 
 
 ## Example Output
 
-RWA 3 run (16x)
+RWA 4 run (16x)
 
 ![Fig.1 RWA 3 complete run gif](RWA3/imgs/rwa3_16x.gif)
 
