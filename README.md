@@ -38,6 +38,6 @@ An in detail Assignment description can be found in
 
 RWA 4 run (16x)
 
-![Fig.1 RWA 3 complete run gif](RWA3/imgs/rwa3_16x.gif)
+![Fig.1 RWA 4 complete run gif](RWA4/imgs/rwa4_16x.gif)
 
 
