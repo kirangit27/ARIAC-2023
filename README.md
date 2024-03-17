@@ -1,5 +1,25 @@
+# Overview
 The ARIAC competition, hosted by NIST, annually challenges robots to perform diverse tasks in a dynamic warehouse environment. Agility here encompasses adaptability, efficiency, and autonomy, crucial for real-world manufacturing. Insights from the competition inform the development of standard metrics and test methods for robotic agility in manufacturing.
+The competition consists of two main actors, the CCS and the AM. The competition is set to different states while running, and the CCS needs to subscribe to the topic ```/ariac/competition_state``` to implement the programming logic properly.
 
+- Competitor Control System (CCS): Competitors' software responsible for communication with the competition environment and task execution.
+- ARIAC Manager (AM): The interface for competitors, providing simulation environment and ROS interfaces.
+
+Further detailed information about the competition overview can be found [here](https://pages.nist.gov/ARIAC_docs/en/2023.5.0/competition/overview.html)
+
+# Installation
+For installing ARIAC please visit [ARIAC Installation](https://pages.nist.gov/ARIAC_docs/en/2023.5.0/getting_started/installation.html) page.
+
+Note: ARIAC 2023 is built for ROS2 Galactic running on Ubuntu 20.04 (Focal Fossa).
+
+# Environment
+![Environment](RWA4/imgs/environment_overview.png)
+
+### Parts
+There are four unique part types and each part can be one of five colors.
+![Parts](RWA4/imgs/part_types.png)
+  
+- Agility Challenge: A scenario or set of scenarios in ARIAC designed to test robotic adaptability and efficiency in dynamic manufacturing environments.
 
 # RWA4
 
