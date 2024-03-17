@@ -14,50 +14,55 @@ Note: ARIAC 2023 is built for ROS2 Galactic running on Ubuntu 20.04 (Focal Fossa
 
 # Environment
 ![Environment](RWA4/imgs/environment_overview.png)
+ - Parts - There are four unique part types and each part can be one of five colors.
+![Parts](RWA4/imgs/parts.png)
+An in detail information about the ARIAC environment can be found [here](https://pages.nist.gov/ARIAC_docs/en/2023.5.0/competition/environment.html)
 
-### Parts
-There are four unique part types and each part can be one of five colors.
-![Parts](RWA4/imgs/part_types.png)
-  
-- Agility Challenge: A scenario or set of scenarios in ARIAC designed to test robotic adaptability and efficiency in dynamic manufacturing environments.
+# Tasks 
+## Kitting Task
+In a kitting task, the Competitor Control System (CCS) is required to:
+- Position a kit tray onto one of the four AGVs.
+- Place parts onto the kit tray within a designated quadrant.
+- Guide the AGV to the warehouse.
+- Evaluate the submitted kit for scoring.
 
-# RWA4
+## Assembly Task
+Assembly is a manufacturing process where interchangeable parts are sequentially added to a product to create the final product.
+- Lock the AGV trays.
+- Move the AGVs to the correct assembly station.
+- Call the pre-assembly poses service.
+- Assemble the parts into an insert.
+- Submit the assembly for scoring.
 
-## Assignment Description
-This assignment consists of completing a combined task and a kitting task.
-- The Order with the combined task is announced at the beginning of the competition. For the kitting part of the combined task, use the tray with id 0.
-- The Order with the kitting task is announced 50s after the competition has started. This second Order is a high-priority Order which should be handled as soon as it is announced.
+## Combined Task
+In a combined task, the Competitor Control System (CCS) is required to execute a kitting task followed by an assembly task.
 
-An in detail Assignment description can be found in
-[RWA4](RWA4/RWA4_ENPM663_SPRING2023.pdf)
+# Agility Challenge
+A scenario or set of scenarios in ARIAC is designed to test robotic adaptability and efficiency in dynamic manufacturing environments. There are 8 possible agility challenges in ARIAC 2023. Besides the Human challenge, all other challenges can occur multiple times in a trial.
 
-## Challenges
-- High-priority Order: A kitting Order, which is of high-priority, is announced 50 s after the competition has started. For this assignment, you will use the ﬂoor robot to perform kitting (including kitting during a combined task) and the ceiling robot to perform assembly. The high-priority Order must be started as soon as it is announced. If the robot is holding a part when the new Order is announced, the competitor control system (CCS) should place the part before starting working on the new Order. Once the high-priority Order is completed, the CCS should resume the other Order. There is a need to keep track of the steps within an Order so it can be resumed.
-- Faulty Part Challenge: The ﬁrst part placed in quadrant on AGV 4 is faulty. Once a part is detected as faulty, it must be removed and replaced with another one. Make sure you discard the faulty part in one of the blue bins.
+## High-priority Orders
+The high-priority orders challenge simulates an order that takes precedence over regular-priority orders. The CCS must complete and submit the high-priority order before processing regular-priority orders. This challenge assesses the CCS's capability to prioritize high-priority orders, requiring it to detect the announcement of a high-priority order and switch tasks accordingly.
 
-## Execution
+## Insufficient Parts
+The insufficient parts challenge replicates a scenario where the workcell lacks the necessary parts to fulfill one or more orders.
+This challenge aims to evaluate the CCS's ability to recognize insufficient parts for fulfilling orders. During this challenge, the CCS must submit orders even if they are incomplete due to the shortage of parts.
 
-1. Launch the ARIAC environment with the rwa2 trail file.
+## Conveyor Belt
+The challenge evaluates the CCS's capability to identify required parts from the conveyor belt through the topic ```/ariac/conveyor_parts```. It assesses the CCS's ability to utilize suitable robots to retrieve parts from the belt and store them appropriately.
 
-    ```
-       $ ros2 launch ariac_gazebo ariac.launch.py trial_name:=rwa4 competitor_pkg:=ARIAC-2023 sensor_config:=sensors
-    ```
 
-    Note: Initially, [rwa4.yaml](RWA4/rwa4.yaml) needs to be placed inside the config/trials folder present in the ariac_gazebo package (as done in previous assignments)
+## Faulty Parts
+Faulty parts are components that are deemed unsuitable for competition use due to their poor condition. The challenge aims to assess the CCS's capability to: 
+- Effectively utilize the quality check sensor for identifying faulty parts.
+- Substitute faulty parts with new ones.
 
-2. Launch the move_group node
 
-    ```
-       $ ros2 launch ariac_moveit_config ariac_robots_moveit.launch.py
-    ```
+## Flipped Parts
+The challenge aims to assess the CCS's method for flipping parts when the environment starts with parts in an upside-down orientation. This evaluation focuses on the CCS's strategy for correcting the orientation of flipped parts to ensure they are properly aligned for use in orders.
 
-3. Launch CCS
 
-    ```
-       $ ros2 launch ARIAC-2023 ccs.launch.py
-    ```
+Further detailed information about these and the remaining agility challenges can be found [here](https://pages.nist.gov/ARIAC_docs/en/2023.5.0/competition/challenges.html#agility-challenges)
 
-## Example Output
 
 RWA 4 run (16x)
 
