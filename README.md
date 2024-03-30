@@ -103,3 +103,10 @@ In RWA4, the objective is to present a fully functional package capable of handl
 ![Fig.1 RWA 4 complete run gif](RWA4/imgs/rwa4_16x.gif)
 
 
+### Contributors
+- [Aniruddh Balram](https://github.com/aniruddhbalram97)
+- [Badrinarayanan](https://github.com/Badri-R-S)
+- [Kiran Patil](https://github.com/kirangit27)
+- [Vyshnav Achuthan](https://github.com/Achuthankrishna)
+
+
